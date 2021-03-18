@@ -4,7 +4,7 @@ package acepta_el_reto;
 import java.util.Scanner;
 
 /**
- *i
+ *
  * @author alumne
  */
 public class Lamapara {
