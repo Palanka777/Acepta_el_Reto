@@ -7,7 +7,7 @@ package acepta_el_reto;
 import java.util.Scanner;
 
 /**
- *.
+ *
  * @author alumne
  */
 public class PortemUna {
