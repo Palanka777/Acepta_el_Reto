@@ -11,7 +11,7 @@ Practica3_1 on no he respectat tan l'estructura per poder aillar un dels metodes
 
 Els casos en que el programa pot donar error no els he tractat perque representa que les dades les passa unaltre programa que 
 es una camara, per tan si el numero es mes gran que el tablero petaria o si es mes petit tambe, ho he deixat aixi pq es un
-problema de acepta el reto i s'espera que les entrades siguin correctes.
+problema de acepta el reto i s'espera que les entrades siguin correctes..
  */
 package acepta_el_reto;
 
