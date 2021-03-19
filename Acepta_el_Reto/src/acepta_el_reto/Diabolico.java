@@ -21,8 +21,15 @@ public class Diabolico {
     
     public static void main(String[] args) {
         
-        
+    
+        do{
+            
         caselles =ent.nextInt();
+        if(caselles>=2 && caselles<=1024)break;
+        
+        }while(true);     
+
+        
         do{
             if(caselles==0)break;
             matriu=new int[caselles][caselles];
