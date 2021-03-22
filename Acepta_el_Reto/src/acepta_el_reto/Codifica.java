@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editor.bo
  */
 package acepta_el_reto;
 
@@ -17,6 +17,8 @@ public class Codifica {
     Scanner ent = new Scanner(System.in);
     String original="", codificat="",codificat1="";
     int constant, cont=0;
+    
+    
 
 do{
     
@@ -33,23 +35,31 @@ do{
 //codifico el missatge
         for (int i = 1; i < original.length(); i++) {
             
-            if((int)original.charAt(i)>90 && (int)original.charAt(i)<97 || (int)original.charAt(i) < 65 || (int)original.charAt(i) > 122){
-                codificat+=""+(original.charAt(i));
-            }else {
+            if((int)original.charAt(i)>64 && (int)original.charAt(i)<91 || (int)original.charAt(i) > 96 && (int)original.charAt(i) < 123){
                 
                 codificat+=""+(char)(original.charAt(i)-constant);
+                
+            }else {
+                
+                codificat+=""+(original.charAt(i));
             }
         }
+
         for (int i = 0; i < codificat.length(); i++) {
             
-            if (codificat.charAt(i)<65 && codificat.charAt(i)!=32){
-                codificat1+=(char)(123-(65-(codificat.charAt(i))));
-                System.out.println("peto aqui 1");
-            }else if (codificat.charAt(i)>122){
-                codificat1+=(char)(((codificat.charAt(i))-123)+65);
-                System.out.println("peto aqui 2");
+            if (codificat.charAt(i)<65 && codificat.charAt(i)!=32 && codificat.charAt(i)!=original.charAt(i+1)){
+                codificat1+=(char)(91-(65-(codificat.charAt(i))));
+
+            }else if (codificat.charAt(i)<97 && codificat.charAt(i)>90 && codificat.charAt(i)!=32 && codificat.charAt(i)!=original.charAt(i+1) && original.charAt(i+1)>96){
+                codificat1+=(char)(123-(97-(codificat.charAt(i))));
+
+            }else if (codificat.charAt(i)>122 && codificat.charAt(i)!=original.charAt(i+1)){
+                codificat1+=(char)(97+(123-(codificat.charAt(i))));
+               
+            }else if (codificat.charAt(i) > 90 && codificat.charAt(i) < 97 && codificat.charAt(i)!=original.charAt(i+1)){
+                codificat1+=(char)(65+(91-(codificat.charAt(i))));
+
             } else codificat1+=(char)codificat.charAt(i);
-              
 
             switch(codificat1.charAt(i)){
                 case 'a':
@@ -86,7 +96,7 @@ do{
         }
         
         if (codificat1.equals("FIN"))break;
-           System.out.println(codificat1);
+
            System.out.println(cont++);
         
         
