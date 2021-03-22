@@ -86,6 +86,8 @@ do{
         }
         
         if (codificat1.equals("FIN"))break;
+           System.out.println(codificat1);
+           System.out.println(cont++);
         
         
         }while(true);
